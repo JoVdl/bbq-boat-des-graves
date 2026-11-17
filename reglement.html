@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Règlement à bord — BBQ Boat des Graves</title>
+  <meta name="description" content="Règlement à bord des BBQ boats électriques du lac de Podensac : consignes de sécurité, alcool, horaires, état des lieux et caution.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23e8751a' stroke='%2314403a' stroke-width='6'/%3E%3C/svg%3E">
+  <style>
+    .regle { max-width: 780px; margin: 0 auto; }
+    .regle h2 { font-size: 1.35rem; margin: 40px 0 12px; color: var(--eau); }
+    .regle h2:first-of-type { margin-top: 0; }
+    .regle p, .regle li { color: var(--texte); }
+    .regle ul { padding-left: 20px; display: grid; gap: 8px; margin: 8px 0 0; }
+    .regle li::marker { color: var(--orange-dark); }
+    .regle__bloc { background: var(--blanc); border-radius: var(--radius); box-shadow: var(--ombre); padding: 24px 26px; }
+    .regle__alerte { border-left: 5px solid var(--danger, #c0392b); }
+    .regle__alerte h2 { color: var(--danger, #c0392b); margin-top: 0; }
+    .regle__chiffre { display: inline-block; font-weight: 700; background: rgba(232, 117, 26, 0.12); color: var(--orange-dark); padding: 1px 8px; border-radius: 6px; }
+    .regle__retour { display: inline-block; margin-top: 30px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__rond"></span>
+        <span class="logo__texte">BBQ Boat<small>des Graves</small></span>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+      <div class="nav__liens" id="menu">
+        <a href="index.html#concept">Le concept</a>
+        <a href="index.html#bateaux">Les bateaux</a>
+        <a href="index.html#tarifs">Formules et tarifs</a>
+        <a href="index.html#faq">Questions</a>
+        <a href="reglement.html">Règlement</a>
+        <a href="index.html#reservation" class="btn btn--plein">Pré-réserver</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="section section--sable" style="padding-bottom:40px;">
+    <div class="container regle">
+      <span class="label">Avant d'embarquer</span>
+      <h1 style="font-size:clamp(2rem,5vw,3rem);margin-bottom:12px;">Règlement à bord</h1>
+      <p style="color:var(--gris);max-width:620px;">Ces consignes s'appliquent à toute location d'un BBQ boat. En envoyant une demande de pré-réservation, vous vous engagez à les respecter.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container regle">
+
+      <div class="regle__bloc regle__alerte" style="margin-bottom:24px;">
+        <h2>Les points essentiels</h2>
+        <ul>
+          <li><strong>Baignade interdite</strong> depuis le bateau comme depuis les abords immédiats.</li>
+          <li><strong>Le pilote ne boit pas d'alcool.</strong> Les autres passagers peuvent consommer des boissons avec modération.</li>
+          <li><strong>Une caution de 200 €</strong> est demandée au départ. Elle est encaissée en cas de dégât ou de perte.</li>
+          <li><strong>Une copie de votre pièce d'identité</strong> est demandée à l'arrivée.</li>
+        </ul>
+      </div>
+
+      <h2>1. Réservation et arrivée</h2>
+      <div class="regle__bloc">
+        <ul>
+          <li>Présentez-vous <strong>15 minutes avant</strong> l'heure de départ de votre formule.</li>
+          <li>En cas de retard, <strong>le créneau n'est pas décalé</strong> : la durée de la location reste celle prévue, et la fin de créneau reste inchangée.</li>
+          <li>Le pilote doit être <strong>majeur</strong> et présenter une pièce d'identité.</li>
+          <li>Une initiation de 15 minutes est donnée au départ. Le pilote s'engage à la suivre.</li>
+        </ul>
+      </div>
+
+      <h2>2. Restitution du bateau</h2>
+      <div class="regle__bloc">
+        <ul>
+          <li>Le bateau doit être <strong>rendu à l'heure</strong> prévue.</li>
+          <li>Tout retard est facturé <span class="regle__chiffre">5 € par minute</span>, payable sur place.</li>
+          <li>Un <strong>état des lieux</strong> est réalisé au départ et au retour, en présence du pilote. Toute dégradation constatée est facturée sur la caution.</li>
+        </ul>
+      </div>
+
+      <h2>3. Zone de navigation</h2>
+      <div class="regle__bloc">
+        <ul>
+          <li>Le pilote s'engage à <strong>rester dans la zone d'évolution</strong> indiquée par le propriétaire, et à ne pas la dépasser.</li>
+          <li>La vitesse est réduite et la navigation se fait en douceur, pour la sécurité de tous et le calme du lac.</li>
+          <li>Les gilets de sauvetage sont <strong>obligatoires</strong> pour toutes les personnes à bord et doivent être portés en cas de besoin.</li>
+        </ul>
+      </div>
+
+      <h2>4. Alcool</h2>
+      <div class="regle__bloc">
+        <ul>
+          <li>Vous pouvez apporter vos boissons, à consommer <strong>avec modération</strong>.</li>
+          <li>Le pilote ne consomme aucun alcool pendant la location.</li>
+          <li>Tout passager en état d'ivresse peut se voir refuser l'accès au bateau, sans remboursement.</li>
+        </ul>
+      </div>
+
+      <h2>5. Barbecue et sécurité</h2>
+      <div class="regle__bloc">
+        <ul>
+          <li>Le barbecue gaz ne s'utilise qu'<strong>sous surveillance</strong>. Ne jamais laisser une flamme sans surveillance.</li>
+          <li>Au retour, <strong>le barbecue est éteint et refroidi</strong>, et la bouteille de gaz est fermée.</li>
+          <li>Aucune flamme ni aucun matériel de cuisson en dehors du barbecue.</li>
+        </ul>
+      </div>
+
+      <h2>6. Mineurs</h2>
+      <div class="regle__bloc">
+        <p>Les mineurs restent <strong>sous la responsabilité de leurs parents</strong> ou des adultes responsables qui les accompagnent, du départ jusqu'au retour du bateau.</p>
+      </div>
+
+      <h2>7. Un lieu de tranquillité</h2>
+      <div class="regle__bloc">
+        <p>Le lac de Podensac est un lieu de quiétude. Nous vous demandons de <strong>contribuer à le garder calme</strong> : musique à volume modéré, pas de cris ni de nuisances pour les riverains et les autres usagers.</p>
+      </div>
+
+      <h2>8. Respect des lieux</h2>
+      <div class="regle__bloc">
+        <ul>
+          <li>Emportez tous vos déchets et déposez-les dans les bacs prévus. Rien ne doit rester à bord ni être jeté dans le lac.</li>
+          <li>Ne pas pêcher depuis le bateau, ni y laisser de matériel de pêche.</li>
+          <li>Les animaux de compagnie ne sont pas admis à bord, sauf accord préalable.</li>
+        </ul>
+      </div>
+
+      <h2>9. Non-respect des consignes</h2>
+      <div class="regle__bloc">
+        <p>En cas de non-respect de ces consignes, le propriétaire peut demander aux occupants de <strong>quitter le site immédiatement, sans remboursement</strong>.</p>
+      </div>
+
+      <h2>10. Météo</h2>
+      <div class="regle__bloc">
+        <p>En cas d'orage ou de vent fort, la sortie est annulée. Vous êtes alors reportés ou remboursés intégralement, comme indiqué dans nos conditions générales.</p>
+      </div>
+
+      <a class="regle__retour btn btn--contour" href="index.html#reservation" style="color:var(--eau);">Retour à la pré-réservation</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grille">
+        <div>
+          <a href="index.html" class="logo"><span class="logo__rond"></span><span class="logo__texte">BBQ Boat<small>des Graves</small></span></a>
+          <p>Bateaux barbecue électriques sans permis,<br>à 30 km au sud de Bordeaux.</p>
+        </div>
+        <div>
+          <h4>Le site</h4>
+          <a href="index.html#concept">Le concept</a>
+          <a href="index.html#bateaux">Les bateaux</a>
+          <a href="index.html#tarifs">Formules et tarifs</a>
+          <a href="reglement.html">Règlement à bord</a>
+        </div>
+        <div>
+          <h4>Nous trouver</h4>
+          <p>Lac de Podensac<br>33720 Podensac, Gironde</p>
+          <a href="tel:0672514714" style="margin-top:6px;">06 72 51 47 14</a>
+        </div>
+      </div>
+      <div class="footer__bas">© 2026 BBQ Boat des Graves. Tous droits réservés. <a href="admin.html" style="display:inline;opacity:0.5;margin-left:8px;">Gestion</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', () => document.getElementById('menu').classList.toggle('ouvert'));
+  </script>
+</body>
+</html>
