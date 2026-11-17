@@ -17,7 +17,7 @@
   };
   const HORAIRES_BBQ = {
     'petit-dej': '9 h – 10 h 30', 'midi': '11 h 30 – 14 h 30', 'apres-midi': '15 h 30 – 17 h 30',
-    'soiree': '18 h – 21 h', 'demi-matin': '10 h – 15 h', 'demi-soir': '16 h – 20 h',
+    'soiree': '18 h – 21 h', 'demi-matin': '10 h – 14 h', 'demi-soir': '16 h – 20 h',
   };
   const BATEAUX = { 'Martin Pêcheur': 'Martin-Pêcheur', 'Pic Vert': 'Pic Vert' };
 

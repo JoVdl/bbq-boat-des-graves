@@ -5,7 +5,7 @@
     'midi': 'Déjeuner · 11 h 30 – 14 h 30',
     'apres-midi': 'Après-midi · 15 h 30 – 17 h 30',
     'soiree': 'Soirée · 18 h – 21 h',
-    'demi-matin': 'Demi-journée · 10 h – 15 h',
+    'demi-matin': 'Demi-journée · 10 h – 14 h',
     'demi-soir': 'Demi-journée · 16 h – 20 h',
   };
   const OUVERTURE = '2027-04-01';

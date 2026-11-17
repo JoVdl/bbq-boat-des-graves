@@ -4,7 +4,7 @@
     'midi':       { nom: 'Déjeuner',           debut: 11.5, fin: 14.5, prix: 210 },
     'apres-midi': { nom: 'Après-midi',         debut: 15.5, fin: 17.5, prix: 110 },
     'soiree':     { nom: 'Soirée',             debut: 18,   fin: 21,   prix: 210 },
-    'demi-matin': { nom: 'Demi-journée matin', debut: 10,   fin: 15,   prix: 270 },
+    'demi-matin': { nom: 'Demi-journée matin', debut: 10,   fin: 14,   prix: 270 },
     'demi-soir':  { nom: 'Demi-journée soir',  debut: 16,   fin: 20,   prix: 270 },
   };
   const OPTIONS = {
