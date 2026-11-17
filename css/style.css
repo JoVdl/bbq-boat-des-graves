@@ -108,6 +108,8 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
 .option strong { display: block; margin: 6px 0 2px; font-size: 0.95rem; }
 .option span { color: #ffb672; font-weight: 700; font-size: 0.9rem; }
 .option small { display: block; color: rgba(255, 255, 255, 0.65); font-size: 0.78rem; margin-top: 4px; }
+.option__detail { list-style: none; margin-top: 8px; text-align: left; display: grid; gap: 4px; color: rgba(255, 255, 255, 0.8); font-size: 0.78rem; line-height: 1.4; }
+.option__detail li::before { content: '•'; color: #ffb672; margin-right: 6px; }
 
 /* FAQ */
 .faq { max-width: 780px; margin: 0 auto; }
