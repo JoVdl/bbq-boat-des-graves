@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Le public peut envoyer une demande, mais seul un compte connecté peut lire ou modifier.
+    match /reservations/{id} {
+      allow create: if request.resource.data.type == 'bateau'
+                    && request.resource.data.status == 'pending';
+      allow read, update, delete: if request.auth != null;
+    }
+    // Le site vérifie un code partenaire précis, sans pouvoir lister les partenaires.
+    match /partenaires/{code} {
+      allow get: if true;
+      allow list, create, update, delete: if request.auth != null;
+    }
+  }
+}
