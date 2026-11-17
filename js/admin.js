@@ -11,6 +11,7 @@
     'bopt-petit-dej': { nom: 'Petit déjeuner', prix: 12 },
     'bopt-apero':     { nom: 'Plateau apéro', prix: 12 },
     'bopt-viande':    { nom: 'Plateau viande', prix: 20 },
+    'bopt-dessert':   { nom: 'Dessert', prix: 8 },
     'bopt-roses':     { nom: 'Pétales de rose', prix: 30, forfait: true },
     'bopt-champagne': { nom: 'Champagne', prix: 40, forfait: true },
   };
