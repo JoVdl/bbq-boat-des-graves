@@ -12,6 +12,7 @@
     'bopt-apero':     { nom: 'Plateau apéro', prix: 12 },
     'bopt-viande':    { nom: 'Plateau viande', prix: 20 },
     'bopt-dessert':   { nom: 'Dessert', prix: 8 },
+    'bopt-cafe':      { nom: 'Café (thermos 10 tasses)', prix: 15, forfait: true },
     'bopt-roses':     { nom: 'Pétales de rose', prix: 30, forfait: true },
     'bopt-champagne': { nom: 'Champagne', prix: 40, forfait: true },
   };
