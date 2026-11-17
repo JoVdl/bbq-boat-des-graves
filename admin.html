@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Gestion — BBQ Boat des Graves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="login" id="login">
+    <form class="login__carte" id="login-form">
+      <h1>BBQ Boat des Graves</h1>
+      <p>Espace de gestion</p>
+      <label for="l-email">Email</label>
+      <input type="email" id="l-email" autocomplete="username" required>
+      <label for="l-mdp">Mot de passe</label>
+      <input type="password" id="l-mdp" autocomplete="current-password" required>
+      <button type="submit" class="b b--plein">Se connecter</button>
+      <div class="login__err" id="login-err" role="alert"></div>
+    </form>
+  </div>
+
+  <div class="app" id="app" hidden>
+    <header class="barre">
+      <strong class="barre__titre">BBQ Boat des Graves</strong>
+      <nav class="onglets" id="onglets">
+        <button data-vue="planning" class="actif">Planning</button>
+        <button data-vue="liste">Réservations</button>
+        <button data-vue="stats">Statistiques</button>
+      </nav>
+      <div class="barre__droite">
+        <button class="b b--plein" id="btn-nouveau">＋ Nouvelle</button>
+        <button class="b" id="btn-sortir" title="Se déconnecter">Quitter</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="vue-planning">
+        <div class="outils">
+          <button class="b" id="sem-prec" aria-label="Semaine précédente">‹</button>
+          <button class="b" id="sem-auj">Aujourd'hui</button>
+          <button class="b" id="sem-suiv" aria-label="Semaine suivante">›</button>
+          <strong id="sem-titre"></strong>
+        </div>
+        <div class="alerte" id="attente" hidden></div>
+        <div class="semaine" id="semaine"></div>
+      </section>
+
+      <section id="vue-liste" hidden>
+        <div class="outils">
+          <input type="search" id="f-rech" placeholder="Rechercher un nom, un téléphone…">
+          <select id="f-statut">
+            <option value="">Tous les statuts</option>
+            <option value="pending">En attente</option>
+            <option value="confirmed">Confirmées</option>
+            <option value="cancelled">Annulées</option>
+          </select>
+          <select id="f-quand">
+            <option value="avenir">À venir</option>
+            <option value="passe">Passées</option>
+            <option value="">Toutes les dates</option>
+          </select>
+          <span class="puce" id="f-extra" hidden></span>
+        </div>
+        <div id="liste"></div>
+      </section>
+
+      <section id="vue-stats" hidden>
+        <div class="outils">
+          <label for="s-annee">Année</label>
+          <select id="s-annee"></select>
+          <small>Hors réservations annulées. Touchez un chiffre pour voir les réservations concernées.</small>
+        </div>
+        <div class="kpis" id="kpis"></div>
+        <h2>Chiffre d'affaires par mois</h2>
+        <div id="mois"></div>
+        <h2>Par formule</h2>
+        <div id="formules"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="fond" id="fond" hidden>
+    <form class="fiche" id="fiche">
+      <div class="fiche__tete">
+        <h2 id="fiche-titre">Réservation</h2>
+        <button type="button" class="b" id="fiche-fermer" aria-label="Fermer">✕</button>
+      </div>
+      <div class="fiche__corps">
+        <div class="deux">
+          <div><label for="r-prenom">Prénom *</label><input id="r-prenom" required></div>
+          <div><label for="r-nom">Nom *</label><input id="r-nom" required></div>
+        </div>
+        <div class="deux">
+          <div><label for="r-tel">Téléphone</label><input id="r-tel" type="tel"></div>
+          <div><label for="r-email">Email</label><input id="r-email" type="email"></div>
+        </div>
+        <div class="deux">
+          <div><label for="r-date">Date *</label><input id="r-date" type="date" required></div>
+          <div><label for="r-formule">Formule *</label><select id="r-formule"></select></div>
+        </div>
+        <div class="deux">
+          <div><label for="r-bateau">Bateau</label>
+            <select id="r-bateau">
+              <option value="indifferent">Non attribué</option>
+              <option value="Martin Pêcheur">Le Martin-Pêcheur</option>
+              <option value="Pic Vert">Le Pic Vert</option>
+            </select>
+          </div>
+          <div><label for="r-nb">Personnes</label><input id="r-nb" type="number" min="1" max="9" value="4"></div>
+        </div>
+        <label>Options</label>
+        <div class="cases" id="r-options"></div>
+        <div class="deux">
+          <div><label>Prix calculé</label><div class="lecture" id="r-calc">—</div></div>
+          <div><label for="r-prix">Prix à facturer (€)</label><input id="r-prix" type="number" min="0" step="0.01" placeholder="Vide = prix calculé"></div>
+        </div>
+        <div class="deux">
+          <div><label for="r-acompte">Déjà payé (€)</label><input id="r-acompte" type="number" min="0" step="0.01" value="0"></div>
+          <div><label>Reste à payer</label><div class="lecture" id="r-reste">—</div></div>
+        </div>
+        <label>Moyen de paiement</label>
+        <div class="choix" id="r-moyen">
+          <button type="button" data-v="especes">💵 Espèces</button>
+          <button type="button" data-v="tpe">💳 Carte</button>
+          <button type="button" data-v="lien">🔗 Lien</button>
+          <button type="button" data-v="virement">🏦 Virement</button>
+        </div>
+        <label>Statut</label>
+        <div class="choix" id="r-statut">
+          <button type="button" data-v="pending">⏳ En attente</button>
+          <button type="button" data-v="confirmed">✓ Confirmée</button>
+          <button type="button" data-v="cancelled">✗ Annulée</button>
+        </div>
+        <div class="infos" id="r-infos"></div>
+        <label for="r-note">Note interne</label>
+        <textarea id="r-note" rows="2"></textarea>
+      </div>
+      <div class="fiche__pied">
+        <button type="button" class="b b--danger" id="fiche-suppr">Supprimer</button>
+        <button type="submit" class="b b--plein" id="fiche-ok">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
