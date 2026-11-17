@@ -113,3 +113,17 @@ main { max-width: 1200px; margin: 0 auto; padding: 16px; }
 @media (max-width: 480px) {
   .deux, .cases { grid-template-columns: 1fr; }
 }
+
+/* Planning commun */
+a.b { text-decoration: none; display: inline-block; }
+.filtres { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.filtres button { border: 1.5px solid var(--bord); background: var(--blanc); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 6px; opacity: 0.5; }
+.filtres button.actif { opacity: 1; }
+.filtres i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+a.resa { display: block; text-decoration: none; color: inherit; border-left-color: var(--c); background: color-mix(in srgb, var(--c) 11%, white); }
+.resa__act { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c); }
+.aide { color: var(--gris); font-size: 0.85rem; margin-top: 16px; }
+@media (max-width: 860px) {
+  .barre__droite { margin-left: 0; flex-basis: 100%; }
+  .barre__droite .b { flex: 1; text-align: center; padding: 8px 6px; font-size: 0.82rem; }
+}

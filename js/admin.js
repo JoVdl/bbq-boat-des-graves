@@ -36,6 +36,7 @@
   let filtreExtra = null;
   let enCours = null;
   let arretEcoute = null;
+  let dejaOuvert = false;
 
   function debutSemaine(d) {
     const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
@@ -73,6 +74,8 @@
     arretEcoute = db.collection('reservations').onSnapshot(snap => {
       reservations = snap.docs.map(d => ({ id: d.id, ...d.data() }));
       rendre();
+      const aOuvrir = new URLSearchParams(location.search).get('edit');
+      if (aOuvrir && !dejaOuvert) { dejaOuvert = true; ouvrir(aOuvrir); }
     }, err => toast('Lecture des réservations impossible : ' + err.message));
   });
 

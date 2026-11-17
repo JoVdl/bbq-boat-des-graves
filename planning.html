@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Planning commun — Lac de Podensac</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="login" id="login">
+    <form class="login__carte" id="login-form">
+      <h1>Planning commun</h1>
+      <p>Pêche, hébergements, canoë et BBQ boat</p>
+      <label for="l-email">Email</label>
+      <input type="email" id="l-email" autocomplete="username" required>
+      <label for="l-mdp">Mot de passe</label>
+      <input type="password" id="l-mdp" autocomplete="current-password" required>
+      <button type="submit" class="b b--plein">Se connecter</button>
+      <div class="login__err" id="login-err" role="alert"></div>
+    </form>
+  </div>
+
+  <div class="app" id="app" hidden>
+    <header class="barre">
+      <strong class="barre__titre">Planning commun</strong>
+      <div class="barre__droite">
+        <a class="b" href="admin.html">Gestion BBQ boat</a>
+        <a class="b" id="lien-peche">Gestion pêche</a>
+        <button class="b" id="btn-sortir">Quitter</button>
+      </div>
+    </header>
+    <main>
+      <div class="outils">
+        <button class="b" id="sem-prec" aria-label="Semaine précédente">‹</button>
+        <button class="b" id="sem-auj">Aujourd'hui</button>
+        <button class="b" id="sem-suiv" aria-label="Semaine suivante">›</button>
+        <strong id="sem-titre"></strong>
+      </div>
+      <div class="filtres" id="filtres"></div>
+      <div class="alerte" id="avis" hidden></div>
+      <div class="semaine" id="semaine"></div>
+      <p class="aide">Touchez une réservation pour l'ouvrir et la modifier dans l'espace de gestion correspondant. Les réservations en pointillé attendent une confirmation.</p>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/planning.js"></script>
+</body>
+</html>
