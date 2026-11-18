@@ -15,7 +15,7 @@
 
 const PartenairesRules = {
   // Prix plein tarif par bateau
-  PRIX: { 'petit-dej': 70, 'midi': 210, 'apres-midi': 110, 'soiree': 210, 'demi-matin': 270, 'demi-soir': 270 },
+  PRIX: { 'petit-dej': 70, 'midi': 210, 'apres-midi': 110, 'soiree': 210, 'demi-matin': 270, 'demi-soir': 270, 'journee': 390 },
 
   // Formules du vendredi soir (remise réduite)
   FORMULES_SOIR: ['soiree', 'demi-soir'],

@@ -7,6 +7,7 @@
     'soiree': 'Soirée · 18 h – 21 h',
     'demi-matin': 'Demi-journée · 10 h – 14 h',
     'demi-soir': 'Demi-journée · 16 h – 20 h',
+    'journee': 'Journée · 9 h – 17 h',
   };
   const OUVERTURE = '2027-04-01';
 

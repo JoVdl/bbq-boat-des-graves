@@ -6,6 +6,7 @@
     'soiree':     { nom: 'Soirée',             debut: 18,   fin: 21,   prix: 210 },
     'demi-matin': { nom: 'Demi-journée matin', debut: 10,   fin: 14,   prix: 270 },
     'demi-soir':  { nom: 'Demi-journée soir',  debut: 16,   fin: 20,   prix: 270 },
+    'journee':    { nom: 'Journée',            debut: 9,    fin: 17,   prix: 390 },
   };
   const OPTIONS = {
     'bopt-petit-dej': { nom: 'Petit déjeuner', prix: 12 },
